@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elena Soler | Concertista & Compositora</title>
+    <title>Ivet | Concertista & Compositora</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@200;400;500&display=swap" rel="stylesheet">
     <style>
@@ -57,17 +57,38 @@
         .nav-link:hover {
             color: var(--gold);
         }
+        /* Estilos Galería */
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 4/5;
+        }
+        .gallery-item img {
+            transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        .gallery-overlay {
+            background: linear-gradient(to top, rgba(10,10,10,0.8), transparent);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
     </style>
 </head>
 <body class="overflow-x-hidden">
 
     <!-- Navegación Minimalista -->
     <nav class="fixed w-full z-50 px-8 py-6 flex justify-between items-center mix-blend-difference">
-        <span class="text-2xl font-light tracking-[0.3em] uppercase">E. Soler</span>
+        <span class="text-2xl font-light tracking-[0.3em] uppercase">Ivet</span>
         <div class="hidden md:flex space-x-12 text-sm tracking-widest uppercase font-medium">
             <a href="#inicio" class="nav-link transition">Inicio</a>
             <a href="#bio" class="nav-link transition">Biografía</a>
             <a href="#repertorio" class="nav-link transition">Repertorio</a>
+            <a href="#galeria" class="nav-link transition">Galería</a>
             <a href="#contacto" class="nav-link transition">Contacto</a>
         </div>
     </nav>
@@ -77,14 +98,14 @@
         <div class="text-center z-10 px-4">
             <div class="mb-8 relative inline-block group">
                 <div class="absolute inset-0 rounded-full border border-gold opacity-50 scale-110 group-hover:scale-125 transition duration-700"></div>
-                <img src="https://images.unsplash.com/photo-1520529986992-d4ce33d399a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=600&q=80" 
-                     alt="Retrato Artístico" 
+                <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=600&q=80" 
+                     alt="Retrato Artístico de Ivet" 
                      class="w-56 h-56 rounded-full border border-white/20 object-cover grayscale hover:grayscale-0 transition duration-1000">
             </div>
-            <h1 class="text-6xl md:text-9xl font-light tracking-tight mb-4 text-white italic">Elena Soler</h1>
+            <h1 class="text-6xl md:text-9xl font-light tracking-tight mb-4 text-white italic">Ivet</h1>
             <div class="flex items-center justify-center space-x-4">
                 <div class="h-[1px] w-12 bg-gold"></div>
-                <p class="text-lg md:text-2xl tracking-[0.4em] uppercase font-extralight text-gold">Violinista & Compositora</p>
+                <p class="text-lg md:text-2xl tracking-[0.4em] uppercase font-extralight text-gold">Vocalista & Concertista</p>
                 <div class="h-[1px] w-12 bg-gold"></div>
             </div>
         </div>
@@ -98,11 +119,11 @@
         <div class="max-w-3xl mx-auto text-center">
             <h2 class="text-gold text-sm tracking-[0.6em] uppercase mb-12">La Esencia</h2>
             <p class="text-3xl md:text-4xl font-light leading-relaxed italic mb-8">
-                "La música no está en las notas, sino en el silencio entre ellas."
+                "La voz es el único instrumento que nace directamente del alma."
             </p>
             <div class="line-accent"></div>
             <p class="text-lg font-light text-gray-400 leading-loose mt-8">
-                Graduada con honores en la Guildhall School of Music de Londres, Elena Soler ha redefinido el papel del violín contemporáneo. Su técnica impecable se fusiona con una sensibilidad audaz, permitiéndole navegar desde los caprichos de Paganini hasta las texturas ambientales del minimalismo moderno. Cada interpretación es un diálogo íntimo entre el instrumento y el alma.
+                Ivet ha cautivado audiencias en los escenarios más prestigiosos de Europa con una voz que desafía las etiquetas. Su formación clásica le otorga un control técnico absoluto, mientras que su instinto artístico la lleva a explorar el jazz, el pop de cámara y composiciones propias impregnadas de misticismo. Cada nota es una historia; cada concierto, un viaje inolvidable.
             </p>
         </div>
     </section>
@@ -119,38 +140,38 @@
                 
                 <!-- Canon Clásico -->
                 <div class="glass-repertorio p-12 rounded-sm text-center">
-                    <h3 class="text-3xl font-light mb-8 italic">Canon Clásico</h3>
+                    <h3 class="text-3xl font-light mb-8 italic">Arias & Lieder</h3>
                     <ul class="space-y-6 text-sm tracking-widest text-gray-300 font-light">
                         <li>
-                            <p class="text-white">Johann Sebastian Bach</p>
-                            <p class="text-[10px] text-gold mt-1">Sonatas y Partitas Completas</p>
+                            <p class="text-white">Giacomo Puccini</p>
+                            <p class="text-[10px] text-gold mt-1">O Mio Babbino Caro</p>
                         </li>
                         <li>
-                            <p class="text-white">Ludwig van Beethoven</p>
-                            <p class="text-[10px] text-gold mt-1">Concierto para Violín en Re Mayor</p>
+                            <p class="text-white">Franz Schubert</p>
+                            <p class="text-[10px] text-gold mt-1">Ave Maria</p>
                         </li>
                         <li>
-                            <p class="text-white">Johannes Brahms</p>
-                            <p class="text-[10px] text-gold mt-1">Sonata Nº 3 en Re Menor</p>
+                            <p class="text-white">Gabriel Fauré</p>
+                            <p class="text-[10px] text-gold mt-1">Après un Rêve</p>
                         </li>
                     </ul>
                 </div>
 
                 <!-- Cine & Narrativa -->
                 <div class="glass-repertorio p-12 rounded-sm text-center border-gold/40">
-                    <h3 class="text-3xl font-light mb-8 italic">Cine & Narrativa</h3>
+                    <h3 class="text-3xl font-light mb-8 italic">Cine & Jazz</h3>
                     <ul class="space-y-6 text-sm tracking-widest text-gray-300 font-light">
                         <li>
-                            <p class="text-white">John Williams</p>
-                            <p class="text-[10px] text-gold mt-1">Schindler's List Theme</p>
+                            <p class="text-white">Michel Legrand</p>
+                            <p class="text-[10px] text-gold mt-1">The Windmills of Your Mind</p>
                         </li>
                         <li>
-                            <p class="text-white">Ennio Morricone</p>
-                            <p class="text-[10px] text-gold mt-1">Love Theme from Cinema Paradiso</p>
+                            <p class="text-white">George Gershwin</p>
+                            <p class="text-[10px] text-gold mt-1">Summertime</p>
                         </li>
                         <li>
-                            <p class="text-white">Philip Glass</p>
-                            <p class="text-[10px] text-gold mt-1">Metamorphosis Suite</p>
+                            <p class="text-white">Henry Mancini</p>
+                            <p class="text-[10px] text-gold mt-1">Moon River</p>
                         </li>
                     </ul>
                 </div>
@@ -161,19 +182,56 @@
                     <ul class="space-y-6 text-sm tracking-widest text-gray-300 font-light">
                         <li>
                             <p class="text-white">Max Richter</p>
-                            <p class="text-[10px] text-gold mt-1">Vivaldi Recomposed</p>
+                            <p class="text-[10px] text-gold mt-1">Lullaby from the Westcoast</p>
                         </li>
                         <li>
-                            <p class="text-white">Elena Soler</p>
-                            <p class="text-[10px] text-gold mt-1">Nocturno Op. 4 "Luz de Invierno"</p>
+                            <p class="text-white">Ivet</p>
+                            <p class="text-[10px] text-gold mt-1">Fragmentos de Cristal (Original)</p>
                         </li>
                         <li>
-                            <p class="text-white">Arvo Pärt</p>
-                            <p class="text-[10px] text-gold mt-1">Fratres para Violín y Piano</p>
+                            <p class="text-white">Björk</p>
+                            <p class="text-[10px] text-gold mt-1">All is Full of Love (Acoustic)</p>
                         </li>
                     </ul>
                 </div>
 
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería Espléndida -->
+    <section id="galeria" class="py-32 bg-[#080808]">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-24">
+                <h2 class="text-4xl md:text-6xl font-light mb-4">Momentos en Vivo</h2>
+                <p class="text-gold uppercase tracking-[0.3em] text-sm">Visuales de Concierto</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="gallery-item group">
+                    <img src="https://images.unsplash.com/photo-1514525253361-bee8718a300a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Ivet en el escenario" class="w-full h-full object-cover">
+                    <div class="gallery-overlay absolute inset-0 flex items-end p-6">
+                        <p class="text-xs tracking-widest uppercase text-white font-light">Teatro Real, Madrid</p>
+                    </div>
+                </div>
+                <div class="gallery-item group lg:mt-12">
+                    <img src="https://images.unsplash.com/photo-1493225255756-d9584f8606e9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Detalle micrófono" class="w-full h-full object-cover">
+                    <div class="gallery-overlay absolute inset-0 flex items-end p-6">
+                        <p class="text-xs tracking-widest uppercase text-white font-light">Grabación de Estudio</p>
+                    </div>
+                </div>
+                <div class="gallery-item group">
+                    <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Ivet ante el público" class="w-full h-full object-cover">
+                    <div class="gallery-overlay absolute inset-0 flex items-end p-6">
+                        <p class="text-xs tracking-widest uppercase text-white font-light">Gira Europea</p>
+                    </div>
+                </div>
+                <div class="gallery-item group lg:mt-12">
+                    <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Silueta Ivet" class="w-full h-full object-cover">
+                    <div class="gallery-overlay absolute inset-0 flex items-end p-6">
+                        <p class="text-xs tracking-widest uppercase text-white font-light">Luces de Bohemia</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -185,11 +243,11 @@
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
                 <a href="#" class="group">
                     <p class="text-[10px] uppercase tracking-widest text-gray-500 mb-2">Booking</p>
-                    <p class="group-hover:text-gold transition font-light">Agencia Internacional</p>
+                    <p class="group-hover:text-gold transition font-light">Agencia Global</p>
                 </a>
                 <a href="#" class="group">
                     <p class="text-[10px] uppercase tracking-widest text-gray-500 mb-2">Prensa</p>
-                    <p class="group-hover:text-gold transition font-light">EPK Disponible</p>
+                    <p class="group-hover:text-gold transition font-light">Kit Multimedia</p>
                 </a>
                 <a href="#" class="group">
                     <p class="text-[10px] uppercase tracking-widest text-gray-500 mb-2">Social</p>
@@ -201,10 +259,10 @@
                 </a>
             </div>
             <div class="inline-block px-12 py-4 border border-gold/30 hover:border-gold transition cursor-pointer">
-                <span class="text-xs uppercase tracking-[0.4em] font-medium text-gold">Agendar Concierto</span>
+                <span class="text-xs uppercase tracking-[0.4em] font-medium text-gold">Consultas y Contratación</span>
             </div>
             <div class="mt-24 text-[10px] uppercase tracking-[0.5em] text-gray-600">
-                &copy; 2024 Elena Soler. Todos los derechos reservados.
+                &copy; 2024 Ivet. Todos los derechos reservados.
             </div>
         </div>
     </footer>
