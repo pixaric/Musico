@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elena Soler | Concertista & Compositora</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@200;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #d4af37;
+            --dark-gold: #aa8c2c;
+            --deep-black: #0a0a0a;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--deep-black);
+            color: #e5e5e5;
+            scroll-behavior: smooth;
+        }
+        h1, h2, h3 {
+            font-family: 'Cormorant Garamond', serif;
+        }
+        .hero-section {
+            background: linear-gradient(to bottom, rgba(10,10,10,0.4), rgba(10,10,10,0.9)), 
+                        url('https://images.unsplash.com/photo-1465847793335-da3b341498b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+        }
+        .gold-border {
+            border-color: var(--gold);
+        }
+        .text-gold {
+            color: var(--gold);
+        }
+        .bg-gold {
+            background-color: var(--gold);
+        }
+        .glass-repertorio {
+            background: rgba(20, 20, 20, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            transition: all 0.5s ease;
+        }
+        .glass-repertorio:hover {
+            border: 1px solid var(--gold);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.1);
+        }
+        .line-accent {
+            width: 50px;
+            height: 1px;
+            background-color: var(--gold);
+            margin: 1rem auto;
+        }
+        .nav-link:hover {
+            color: var(--gold);
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <!-- Navegación Minimalista -->
+    <nav class="fixed w-full z-50 px-8 py-6 flex justify-between items-center mix-blend-difference">
+        <span class="text-2xl font-light tracking-[0.3em] uppercase">E. Soler</span>
+        <div class="hidden md:flex space-x-12 text-sm tracking-widest uppercase font-medium">
+            <a href="#inicio" class="nav-link transition">Inicio</a>
+            <a href="#bio" class="nav-link transition">Biografía</a>
+            <a href="#repertorio" class="nav-link transition">Repertorio</a>
+            <a href="#contacto" class="nav-link transition">Contacto</a>
+        </div>
+    </nav>
+
+    <!-- Hero / Encabezado de Gala -->
+    <header id="inicio" class="hero-section h-screen flex items-center justify-center relative overflow-hidden">
+        <div class="text-center z-10 px-4">
+            <div class="mb-8 relative inline-block group">
+                <div class="absolute inset-0 rounded-full border border-gold opacity-50 scale-110 group-hover:scale-125 transition duration-700"></div>
+                <img src="https://images.unsplash.com/photo-1520529986992-d4ce33d399a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=600&q=80" 
+                     alt="Retrato Artístico" 
+                     class="w-56 h-56 rounded-full border border-white/20 object-cover grayscale hover:grayscale-0 transition duration-1000">
+            </div>
+            <h1 class="text-6xl md:text-9xl font-light tracking-tight mb-4 text-white italic">Elena Soler</h1>
+            <div class="flex items-center justify-center space-x-4">
+                <div class="h-[1px] w-12 bg-gold"></div>
+                <p class="text-lg md:text-2xl tracking-[0.4em] uppercase font-extralight text-gold">Violinista & Compositora</p>
+                <div class="h-[1px] w-12 bg-gold"></div>
+            </div>
+        </div>
+        <div class="absolute bottom-12 left-1/2 -translate-x-1/2 opacity-30 text-xs tracking-[0.5em] uppercase animate-pulse">
+            Deslizar para descubrir
+        </div>
+    </header>
+
+    <!-- Biografía Íntima -->
+    <section id="bio" class="py-32 px-6 bg-[#0c0c0c]">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-gold text-sm tracking-[0.6em] uppercase mb-12">La Esencia</h2>
+            <p class="text-3xl md:text-4xl font-light leading-relaxed italic mb-8">
+                "La música no está en las notas, sino en el silencio entre ellas."
+            </p>
+            <div class="line-accent"></div>
+            <p class="text-lg font-light text-gray-400 leading-loose mt-8">
+                Graduada con honores en la Guildhall School of Music de Londres, Elena Soler ha redefinido el papel del violín contemporáneo. Su técnica impecable se fusiona con una sensibilidad audaz, permitiéndole navegar desde los caprichos de Paganini hasta las texturas ambientales del minimalismo moderno. Cada interpretación es un diálogo íntimo entre el instrumento y el alma.
+            </p>
+        </div>
+    </section>
+
+    <!-- Repertorio Magistral -->
+    <section id="repertorio" class="py-32 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-24">
+                <h2 class="text-4xl md:text-6xl font-light mb-4">El Repertorio</h2>
+                <p class="text-gold uppercase tracking-[0.3em] text-sm">Curaduría Artística</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                
+                <!-- Canon Clásico -->
+                <div class="glass-repertorio p-12 rounded-sm text-center">
+                    <h3 class="text-3xl font-light mb-8 italic">Canon Clásico</h3>
+                    <ul class="space-y-6 text-sm tracking-widest text-gray-300 font-light">
+                        <li>
+                            <p class="text-white">Johann Sebastian Bach</p>
+                            <p class="text-[10px] text-gold mt-1">Sonatas y Partitas Completas</p>
+                        </li>
+                        <li>
+                            <p class="text-white">Ludwig van Beethoven</p>
+                            <p class="text-[10px] text-gold mt-1">Concierto para Violín en Re Mayor</p>
+                        </li>
+                        <li>
+                            <p class="text-white">Johannes Brahms</p>
+                            <p class="text-[10px] text-gold mt-1">Sonata Nº 3 en Re Menor</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Cine & Narrativa -->
+                <div class="glass-repertorio p-12 rounded-sm text-center border-gold/40">
+                    <h3 class="text-3xl font-light mb-8 italic">Cine & Narrativa</h3>
+                    <ul class="space-y-6 text-sm tracking-widest text-gray-300 font-light">
+                        <li>
+                            <p class="text-white">John Williams</p>
+                            <p class="text-[10px] text-gold mt-1">Schindler's List Theme</p>
+                        </li>
+                        <li>
+                            <p class="text-white">Ennio Morricone</p>
+                            <p class="text-[10px] text-gold mt-1">Love Theme from Cinema Paradiso</p>
+                        </li>
+                        <li>
+                            <p class="text-white">Philip Glass</p>
+                            <p class="text-[10px] text-gold mt-1">Metamorphosis Suite</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Obra Propia & Contemporánea -->
+                <div class="glass-repertorio p-12 rounded-sm text-center">
+                    <h3 class="text-3xl font-light mb-8 italic">Vanguardia</h3>
+                    <ul class="space-y-6 text-sm tracking-widest text-gray-300 font-light">
+                        <li>
+                            <p class="text-white">Max Richter</p>
+                            <p class="text-[10px] text-gold mt-1">Vivaldi Recomposed</p>
+                        </li>
+                        <li>
+                            <p class="text-white">Elena Soler</p>
+                            <p class="text-[10px] text-gold mt-1">Nocturno Op. 4 "Luz de Invierno"</p>
+                        </li>
+                        <li>
+                            <p class="text-white">Arvo Pärt</p>
+                            <p class="text-[10px] text-gold mt-1">Fratres para Violín y Piano</p>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Galería de Contacto -->
+    <footer id="contacto" class="py-24 px-6 border-t border-white/5">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl font-light mb-12">Contacto Artístico</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+                <a href="#" class="group">
+                    <p class="text-[10px] uppercase tracking-widest text-gray-500 mb-2">Booking</p>
+                    <p class="group-hover:text-gold transition font-light">Agencia Internacional</p>
+                </a>
+                <a href="#" class="group">
+                    <p class="text-[10px] uppercase tracking-widest text-gray-500 mb-2">Prensa</p>
+                    <p class="group-hover:text-gold transition font-light">EPK Disponible</p>
+                </a>
+                <a href="#" class="group">
+                    <p class="text-[10px] uppercase tracking-widest text-gray-500 mb-2">Social</p>
+                    <p class="group-hover:text-gold transition font-light">Instagram</p>
+                </a>
+                <a href="#" class="group">
+                    <p class="text-[10px] uppercase tracking-widest text-gray-500 mb-2">Escucha</p>
+                    <p class="group-hover:text-gold transition font-light">Spotify</p>
+                </a>
+            </div>
+            <div class="inline-block px-12 py-4 border border-gold/30 hover:border-gold transition cursor-pointer">
+                <span class="text-xs uppercase tracking-[0.4em] font-medium text-gold">Agendar Concierto</span>
+            </div>
+            <div class="mt-24 text-[10px] uppercase tracking-[0.5em] text-gray-600">
+                &copy; 2024 Elena Soler. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
